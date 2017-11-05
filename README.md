@@ -1,10 +1,7 @@
-# Tuple-Infix 
-
-# &
-# :=
+# Tuple-Infix  (&, :=)
 
 
-In nearly every one of my Elm projects, I use these two infix functions: `&` and `:=`. They both tuple, but I use them differently. `&` is used just to tuple two random things, like at the end of an update function.
+In nearly all of my Elm projects, I use these two infix functions: `&` and `:=`. They both tuple, but I use them differently. `&` is used just to tuple two random things, like at the end of an update function.
 
 ```elm
   Noop ->
