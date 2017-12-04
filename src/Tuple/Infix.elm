@@ -2,6 +2,7 @@ module Tuple.Infix
     exposing
         ( (&)
         , (:=)
+        , (|&)
         )
 
 {-| Helpers functions I like to use in my projects
@@ -9,9 +10,23 @@ module Tuple.Infix
 
 # Infix functions
 
-@docs (&), (:=)
+@docs (&), (:=), (|&)
 
 -}
+
+
+{-| Sometimes `Msg` lead to complicated cmds, but not complicated model updates, and its hard to pipe stuff together when the second part of a tuple is complicated. `|&` tuples but it switches the elements.
+
+    YahooDotCom
+        |> Page.toUrl
+        |> GoToPage
+        |> Ports.send
+        |& model
+
+-}
+(|&) : a -> b -> ( b, a )
+(|&) a b =
+    ( b, a )
 
 
 {-| An infix function that tuples two elements, often used at the end of an update function
