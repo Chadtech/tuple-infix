@@ -55,4 +55,7 @@ module Tuple.Infix
 infixl 0 &
 
 
+infixl 0 |&
+
+
 infixl 0 :=
